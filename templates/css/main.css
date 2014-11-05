@@ -1,0 +1,15 @@
+*{
+
+	direction: rtl;
+	font-family: ukij tuz;
+	font-size: 17px;
+}
+ul li{
+
+	text-decoration: none;
+	list-style: none;
+
+}
+ul li a{
+	color: red;
+}

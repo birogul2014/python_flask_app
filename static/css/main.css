@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+	direction: rtl;
+	font-family: ukij tuz;
+	font-size: 17px;
+}
+body{
+
+	background-color: yellowgreen;
+}
+ul li{
+
+	text-decoration: none;
+	list-style: none;
+
+}
+a{
+	background-color: red;
+	padding: 20px;
+	color: white;
+	border:2px solid orange;
+
+	border-left: 2px solid orange;
+	border-radius: 5px;
+}
+a:hover{
+
+	border-bottom:2px solid green;
+}

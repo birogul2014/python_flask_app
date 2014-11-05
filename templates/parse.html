@@ -1,0 +1,70 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>My Parse App</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/reset.css')}}">
+
+
+
+
+ <script src="//www.parsecdn.com/js/parse-1.3.1.min.js" async></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.js" ></script>
+
+      <script type="text/javascript" defer >
+      $(function(){
+$("#qak").on("click",function(){
+
+     var title=$("#title").val();
+    var mezmun=$("#mezmun").val();
+   if(title.length<10 &&mezmun.length<20){
+    alert("keqik");
+   }else{
+        Parse.initialize("hSNY3qCUgP6jYeb3dwG53huAGGd8YEHugCAjdgGR", "YQweurkNQQi0ZUrWVEzWgRcmLAzYmg1WDU2v2Sry");
+
+
+     var turlar = Parse.Object.extend("turlar");
+    var turlar = new turlar();
+ 
+   turlar.save({title: title,desc:mezmun}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+    $(".success").show();
+   }
+})
+
+      
+ 
+
+      })
+  
+     
+    
+</script>
+
+</head>
+
+<body>
+  
+ <div id="main">
+   <h2>خاتىرەم</h2>
+<input type="text" id="title"></br>
+<label>mezmuni</label></br>
+<input type="text" id="mezmun"></br>
+<button id="qak">awatish</button>
+
+<div style="display:none" class="success">muwappikiyatlik boldi</div>
+ </div>
+
+
+</body>
+
+</html>
